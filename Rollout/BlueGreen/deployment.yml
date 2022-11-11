@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rolleout
 metadata:
   name: rollout-bluegreen
 spec:
@@ -15,7 +15,19 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+  strategy:
+    blueGreen: 
+      ## Active Service Name
+      activeService: rollout-bluegreen-active
+      ## Preview Service Name
+      previewService: rollout-bluegreen-preview
+      ## Manual Update?
+      # autoPromotionEnabled: false
+      autoPromotionEnabled: true
+      previewReplicaCount: 1
+      autoPromotionSeconds: 300
+      scaleDownDelaySeconds: 30
