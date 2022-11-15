@@ -20,6 +20,7 @@
 <img width="550" src="https://github.com/isfukuda/ArgoCD/blob/main/Rollout/BlueGreen/APP_NEW_CREATE.png">
 <img width="550" src="https://github.com/isfukuda/ArgoCD/blob/main/Rollout/BlueGreen/APP_NEW_CREATE_2nd.png"> 
 ### k8s状態確認
+
 - APPにより、k8s上の各種リソースオブジェクトの状況把握
 <img width="550" src="https://github.com/isfukuda/ArgoCD/blob/main/Rollout/BlueGreen/APP_NEW_STATUS.png">
 ### Git push, merge
