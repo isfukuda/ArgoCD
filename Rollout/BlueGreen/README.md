@@ -13,11 +13,20 @@
 3. 今回はk8s上の特定の「サービス/機能」に関して Ver0.1 -> 0.2 にあげる
 　　- その際、人の手を介して行われる一連のk8s的な操作をArgoCDに置き換えたい
 4. Ver0.2をリリースするManifestが所定のBranchへpush、MainブランチへPullReqが走り承認プロセスが回る、Mergeされる
-5. 
-6. ArgoCDがMainブランチの変更を検知、BlueGreenデプロイメントをManifestに従い自動実行
+6. ArgoCDがMainブランチの変更を検知、BlueGreenデプロイメントをManifestに従い自動実行される
 ## 結果
-## まとめ
-### 
+### Argo, APP NEW
+- ArgoCD UI上に"APP"を作成し、Repo等の情報を入力
+<img width="550" src="https://github.com/isfukuda/ArgoCD/blob/main/Rollout/BlueGreen/APP_NEW_CREATE.png">
+<img width="550" src="https://github.com/isfukuda/ArgoCD/blob/main/Rollout/BlueGreen/APP_NEW_CREATE_2nd.png"> 
+### k8s状態確認
+- APPにより、k8s上の各種リソースオブジェクトの状況把握
+<img width="550" src="https://github.com/isfukuda/ArgoCD/blob/main/Rollout/BlueGreen/APP_NEW_STATUS.png">
+### Git push, merge
+<img width="550" src="https://github.com/isfukuda/ArgoCD/blob/main/Rollout/BlueGreen/pullrequest.png">
+### BlueGreen Deployment
+- 画像一番下、新しいPOD(RS:ReplicaSet)が出現、古いPODと入れ替わる
+<img width="550" src="https://github.com/isfukuda/ArgoCD/blob/main/Rollout/BlueGreen/bluegreen_result.png">
 ## 備考
 ### 触れなかった事
 - 本資料に書かれてない事は「考慮されていない事」
