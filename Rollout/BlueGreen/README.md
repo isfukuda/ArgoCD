@@ -3,10 +3,10 @@
 ## 目的
 - ArgoCD [Rollout](https://argoproj.github.io/argo-rollouts/features/bluegreen/) CRDによるデプロイメント戦略/実装の一部を共有
 - BlueGreen戦略の基本的な「実装」の共有
+- シナリオ4.　について人の手を介して行われる一連のk8s的な操作をArgoCDに置き換えていく、楽していく、システム開発(特にコーディング)に注力させるが本資料が目指す所
 
 ## 本件のシナリオ
 - 本来はCI/CD戦略ありきで進めるはずであり、疑問点が諸所あろうとは思いますがご容赦願います
-- 【POINT】下記の4.について人の手を介して行われる一連のk8s的な操作をArgoCDに置き換えたい
 
 1. kubernetes上にすでに稼働中のService, Deployment, StatefulSetがあり稼働している、とする
 2. 上記のアプリケーション/サービスは特定のRepository、Branchで管理されている
@@ -33,6 +33,7 @@
 - OB3リリース要件のガイドラインが決まり次第、改めて検証が必須になるのでご留意ください
 - ArgoCDは多機能で触れていない事が多数あるので誤解のないようにお願いします
 - 本資料に書かれてない事は「考慮されていない事」です
+- BluleGreen Deployment [解説動画](https://www.youtube.com/watch?v=krDxDz4V4Tg)
 ### 触れなかった事
 1. CI/CD全般
 2. アプリケーションとそのImage構築、管理
