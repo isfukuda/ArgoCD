@@ -33,6 +33,7 @@
 - OB3リリース要件のガイドラインが決まり次第、改めて検証が必須になるのでご留意ください
 - ArgoCDは多機能で触れていない事が多数あるので誤解のないようにお願いします
 - 本資料に書かれてない事は「考慮されていない事」です
+- ArgoCD RollOut[公式動画]（https://www.youtube.com/watch?v=hIL0E2gLkf8)
 - BluleGreen Deployment [解説動画](https://www.youtube.com/watch?v=krDxDz4V4Tg)
 ### 触れなかった事
 1. CI/CD全般
