@@ -35,12 +35,12 @@
 <img width="550" src="https://github.com/isfukuda/ArgoCD/blob/main/Rollout/BlueGreen/bluegreen_result.png">
 
 ## 備考/補足
-- OB3リリース要件のガイドラインが決まり次第、改めて検証が必須になるのでご留意ください
+- Project毎(あるいはService)リリース要件のガイドラインが決まり次第、改めて検証が必須になるのでご留意ください
 - ArgoCDは多機能で触れていない事が多数あるのでこれがArgoCDの全てではない点、誤解のないようにお願いします
 - 本資料に書かれてない事は「考慮されていない事」です
 - ArgoCD RollOut[公式動画](https://www.youtube.com/watch?v=hIL0E2gLkf8)
 - BluleGreen Deployment [解説動画](https://www.youtube.com/watch?v=krDxDz4V4Tg)
-### 触れなかった事
+## 触れなかった事
 1. CI/CD全般
 2. アプリケーションとそのImage構築、管理
 3. アプリケーションリリースに関するテスト全般
@@ -48,3 +48,5 @@
 5. k8s
 6. MicroService Architecture全般　
 7. Database連携
+8. 監視全般、とその連携
+9. Monitoring
